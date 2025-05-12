@@ -34,6 +34,15 @@ public class Rectangle {
 		return "Rectangle [width=" + width + ", height=" + height + "]";
 	}
 	
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null || getClass() != obj.getClass()) return false;
+		
+		Rectangle other = (Rectangle) obj;
+		// 면적 비교
+		return this.width * this.height == other.width * other.height;
+	}
+	
 	
 
 }
